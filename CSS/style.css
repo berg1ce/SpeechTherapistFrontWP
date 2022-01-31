@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #00BFFF), url(bg1.jpg);
+    background-attachment: fixed; 
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    color: black;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+}
+
+nav {
+    /* color: red; */
+    display: flex;
+    
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    justify-content:flex-end;
+}
+
+.logo{
+    /* width: 120px; */
+    height: 100px; 
+    cursor: pointer;
+}
+
+.cart-icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 0px;
+}
+
+ ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+
+ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+
+ul li a:hover::after{
+    width: 50%;
+}
+
+.text-box{
+    /* color:#fff; */
+    position: absolute;
+    bottom: 8%;
+}
+
+.text-box p{
+    font-size: 130px;
+    line-height: 150px;
+    margin-left: -10px;
+    color: transparent; 
+    -webkit-text-stroke: 1px #fff;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: 0 0;
+    animation: back 60s linear infinite;
+}
+
+.text-box h1{
+    font-size: 130px;
+    line-height: 150px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-position: 0 0;
+    animation: back 55s linear infinite;
+}
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.text-box h3{
+    font-size: 40px;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.therapyt{
+    color:#fff;
+    bottom: 8%;
+}
+
+.row a{
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+}
+
+.row a span:hover {
+    background: rgba( 255, 255, 255, 0.2 );
+    border: 2px solid transparent;
+    padding: 6px 34px 6px 14px !important;
+    transition: .3s;
+}
+
+.row a span{
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: 500;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 6px 20px;
+    line-height: 1.7em;
+    background: transparent;
+    border: 2px solid;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.row a span:hover:after{
+    font-size: 32px;
+    line-height: 1em;
+    content: " >";
+    opacity: 0;
+    position: absolute;
+    margin-left: -20px;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    top: 7px;
+    right: 5px;
+}
+
+.row a span:hover:after{
+    opacity: 1;
+    margin-left: 0;
+}
+
+/* .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.row a{
+    width: 250px;
+    font-size: 5px;
+    font-family: 'poppins', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+    padding: 25px 0;
+    color: #fff;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.1s;
+}
+
+.row a span{
+    width: 0%; 
+    height: 100%; 
+    font-family: 'poppins', sans-serif;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: -5px;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.row a:hover span{
+    width: 100%;
+}
+
+.row a:hover{
+    color: #000;
+}
+
+.row .arrow{
+    width: 0%; 
+    height: 100%; 
+    position: absolute;
+    margin-left: 190px;
+    margin-top: -20px;
+}
+
+.text-box a{
+    color:#fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.text-box a span{
+    font-size: 25px;
+    line-height: 15px;
+    margin-left: 5px;
+    font-family: sans-serif;
+} */
+
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.social-icons *{ 
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 25px 5px;
+}
+
+.social-icons svg{
+    width: 30px;
+    height: 30px;
+}
+
+/* 
+.social-icons i{
+    color: #fff; 
+}
+
+.social-icons div{
+    color: #fff; 
+} */
+
+/* .social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+} */
+
+/*
+nav a {
+    display: block;
+    width: 20%;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    text-decoration: none;
+    color: #ffffff;
+    height: 43px;
+    z-index: 100;
+    padding: 15px;
+    transition: all 0.5s ease;
+
+}
+
+a.menu:hover {
+    font-size: 18px;
+    color: #f7dfec;
+    box-sizing: border-box;
+    border: solid 2px #f7dfec;
+    border-radius: 5px;
+    margin-top: 0.5px;
+}
+
+.menu.active {
+    font-size: 18px;
+    color: #eef091;
+    box-sizing: border-box;
+    border: solid 2px #eef091;
+    border-radius: 5px;
+    margin-top: 0.5px;
+    transition-duration: 0.4s;
+}
+
+header {
+    width: 1240px;
+    background-image: url(logopedalong.jpg);
+    background-position: center 43px;
+    background-size: 88%;
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+
+    height: 23vw;
+    display: block;
+
+    background-attachment: fixed;
+}
+
+header img {
+    background-image: url(logopedalong.jpg);
+    background-repeat: no-repeat;
+    background-position: center 43px;
+    background-size: 100%;
+    width: 100%;
+    display: block;
+    height: 350px;
+    background-attachment: fixed;
+}
+
+article {
+    max-width: 1240px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.therapy {
+
+    border-radius: 25px;
+    display: inline-block;
+}
+
+article h1 {
+
+    text-align: center;
+    font-size: 35px;
+    margin: 0 20% 5px 40%;
+    padding-bottom: 10px;
+}
+
+.therapy h1 {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.boxter {
+    display: inline-block;
+    width: 33%;
+    height: 350px;
+    border: 3px solid #f7dfec;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgba(247, 223, 236, 0.33);
+    overflow: hidden;
+}
+
+.therapy h3 {
+    display: inline-block;
+    font-size: 27px;
+    text-align: center;
+    width: 70%;
+    padding: 15px;
+}
+
+.tex {
+    display: inline-block;
+    border: none;
+    width: 100%;
+}
+
+img.face {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    display: block;
+    border-radius: 40% 15%;
+    border: 3px solid #f7dfec;
+    margin: 0 2px 0 2px;
+}
+
+article p {
+    text-align: justify;
+    float: left;
+    width: 74%;
+    padding: 10px;
+    line-height: 24px;
+    font-size: 18px;
+    border-top: 3px solid #f7dfec;
+    border-bottom: 3px solid #f7dfec;
+}
+
+img.ter {
+    width: 27%;
+    display: block;
+    border-radius: 15% 40%;
+    border: 3px solid #f7dfec;
+    margin-left: 10px;
+    margin-bottom: auto;
+    float: left;
+}
+
+.boxter:hover {
+    border-color: #facae4;
+    background-color: rgba(247, 223, 236, 0.5);
+    transition-duration: 0.4s;
+}
+
+.clear {
+    clear: both;
+}
+
+.box {
+    padding-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.iconfb {
+
+    width: 30%;
+    margin-right: 50px;
+}
+
+
+.iconvk {
+display: inline-block;
+width:300px;
+height:300px;
+border-radius: auto;
+margin-right: 50px;
+background:url('iconVK.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+.iconvk:hover{
+background:url('iconVKh.png');
+}
+
+.iconin {
+display: inline-block;
+width:300px;
+height:300px;
+border-radius: 50%;
+margin-right: 50px;
+background:url('iconINS.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+.iconin:hover{
+background:url('iconINSh.png');
+}
+
+.icontel {
+display: inline-block;
+width:300px;
+height:300px;
+border-radius: 50%;
+margin-right: 50px;
+background:url('iconTEL.png');
+background-repeat: no-repeat;
+background-position: center;
+}
+.icontel:hover{
+background:url('iconTELh.png');
+background-repeat: no-repeat;
+}
+
+
+.icond {
+    width: 50%;
+
+}
+
+.iconm {
+    width: 50%;
+}
+
+
+#footer {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+.footerTEXT {
+
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+@media (max-width: 500px) {
+    nav a {
+        width: 100%;
+    }
+
+    img.face {
+        width: 100%;
+        height: 100%
+    }
+
+    article p {
+        width: 100%;
+    }
+
+    .boxter {
+        width: 100%
+    }
+
+    img.ter {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+li.name {
+    float: left;
+    border: 3px solid #f7dfec;
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 24px;
+    width: 70%;
+    border-radius: 5px;
+
+}
+
+li.price {
+    display: blockl;
+    float: left;
+    border: 3px solid #f7dfec;
+    margin: 5px 5px 5px 2px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 24px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+ul {
+    padding: 0 10% 0 30%;
+    display: inline-block;
+}
+
+.boxkontakt a{
+    clear: both;
+    display: inline-block;
+
+}
+
+.boxkontakt .boxter {
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+
+.therapyt img{
+    position: static;
+    display: inline-block;
+    width: 30%;
+    margin-left: 2%;
+}
+
+.therapyt .boxter{
+    display: inline-block;
+    width: 60%;
+    height: 369px;
+    margin-left: 5%;
+    z-index: -1;
+}
+.therapyt h1 {
+
+    font-family: sans-serif;
+    font-size: 38px;
+    text-align: center;
+    padding: 25px;
+}
+
+
+.therapyt h3 {
+
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+}
